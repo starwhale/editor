@@ -2,9 +2,9 @@
   "name": "electron-quick-start",
   "version": "1.0.0",
   "description": "A minimal Electron application",
-  "main": "main.js",
+  "main": "backend/main.js",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron backend/main.js"
   },
   "repository": {
     "type": "git",

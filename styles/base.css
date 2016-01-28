@@ -1,3 +1,13 @@
+/**
+    @file           basic.css
+    @author         Eliran Pe'er (eliran@starwhale.com)
+    @since          27/01/2016
+    @version        1.0.0
+    @type           CSS Stylesheet
+    @description    The basic CSS stylesheet, which contains all the basic
+                    defenitions that applies to all themes and windows.
+*/
+
 body {
     font-family: "Arial";
     font-size: 14px;

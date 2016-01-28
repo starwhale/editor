@@ -1,3 +1,13 @@
+/**
+    @file           dark.css
+    @author         Eliran Pe'er (eliran@starwhale.com)
+    @since          27/01/2016
+    @version        1.0.0
+    @type           CSS Stylesheet
+    @description    The default theme of Starwhale. Contains few color and font
+                    defenitions.
+*/
+
 body {
     color: #9DA5B4;
     background-color: #21252B;

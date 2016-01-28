@@ -1,3 +1,12 @@
+<!--
+    @file           mainWindow.html
+    @author         Eliran Pe'er (eliran@starwhale.com)
+    @since          27/01/2016
+    @version        1.0.0
+    @type           HTML View File
+    @description    Repesents the view of the main window of the application.
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,18 +14,24 @@
         <title>Starwhale Editor</title>
         <link rel="stylesheet" type="text/css" href="../styles/base.css" />
 
-        <script src="../scripts/infrastructure/all.js"></script>
+        <script src="../scripts/infrastructure/base.js"></script>
     </head>
 
     <body>
-        <div>
-        	<div id="left-pane">
-                <div data-viewpart="explorer"></div>
-        	</div>
+    	<div id="left-pane">
+            <button onclick='windows.open("settingsWindow", {
+                width: 600,
+                height: 500,
+                minimizable: false,
+                maximizable: false,
+                alwaysOnTop: true,
+                center: true,
+            });'>Settings</button>
+            <div data-viewpart="explorer"></div>
+    	</div>
 
-        	<div id="right-pane">
-                <div data-viewpart="code-editor"></div>
-        	</div>
-        </div>
+    	<div id="right-pane">
+            <div data-viewpart="code-editor"></div>
+    	</div>
     </body>
 </html>

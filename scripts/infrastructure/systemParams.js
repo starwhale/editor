@@ -41,7 +41,7 @@ systemParams.scripts = {
         'viewparts.js': "Defines the viewparts static class, which contains that load and manage view parts.",
         'set-panel-sizes.js': "Fix the panel width and height everytime the window resizes.",
         'themes.js': "Defines the themes class, which manages and loads ui themes.",
-        'create-ipc-connection.js': "Creates the connection tunnel between the Node.js layer and the Javascript layer.",
+        'windows.js': "Manage software windows.",
 
         // Startup loaders
         'load-startup-viewparts.js': "Loads the viewparts of the window on startup.",
