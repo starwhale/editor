@@ -11,41 +11,57 @@
 /**
     Require the system parameters configuration file.
 */
-var imported = document.createElement('script');
-imported.src = '../scripts/infrastructure/systemParams.js';
-document.head.appendChild(imported);
+var systemParamsScirptElement = document.createElement('script');
+systemParamsScirptElement.src = '../scripts/infrastructure/systemParams.js';
+document.head.appendChild(systemParamsScirptElement);
 
 /**
     Require jQuery, and make it available for Electron.
 */
-var imported = document.createElement('script');
-imported.src = '../scripts/infrastructure/jquery.js';
-document.head.appendChild(imported);
+var jqueryScirptElement = document.createElement('script');
+jqueryScirptElement.src = '../scripts/infrastructure/jquery.js';
+document.head.appendChild(jqueryScirptElement);
 
 window.$ = window.jQuery = module.exports;
 
 /**
-    Load all the scripts defined in the scripts list.
+    Create IPC Channel
 */
-window.onload = function() {
-    for (let path in systemParams.scripts) {
-        // Extract the description from the scripts array.
-        let description = systemParams.scripts[path];
+window.ipcRenderer = require('electron').ipcRenderer;
 
-        // Use jQuery to load the script, and report back to the console if
-        // debug mode is set to true.
-        $.getScript("../scripts/" + path)
-            .done(function() {
-                if (systemParams.debugMode) {
-                    console.group("Script '" + path + "' has loaded.");
-                    console.log(description);
-                    console.groupEnd();
-                }
-            })
-            .fail(function(a, b, ex) {
-                if (systemParams.debugMode) {
-                    console.error("Script '" + path + "' has failed to load. (" + ex + ")");
-                }
-            });
-    };
+window.onload = function() {
+
+    /**
+        Load user settings module
+    */
+    $.getScript('../scripts/infrastructure/settings.js')
+    .done(function() {
+        settings.load(systemParams.settingsFile, function() {
+            /**
+                Load all the scripts defined in the scripts list.
+            */
+            for (let path in systemParams.scripts) {
+                // Extract the description from the scripts array.
+                let description = systemParams.scripts[path];
+
+                // Use jQuery to load the script, and report back to the console if
+                // debug mode is set to true.
+                $.getScript("../scripts/" + path)
+                    .done(function() {
+                        if (systemParams.debugMode) {
+                            console.group("Script '" + path + "' has loaded.");
+                            console.log(description);
+                            console.groupEnd();
+                        }
+                    })
+                    .fail(function(a, b, ex) {
+                        if (systemParams.debugMode) {
+                            console.error("Script '" + path + "' has failed to load. (" + ex + ")");
+                        }
+                    });
+            };
+        });
+    });
+
+
 }
