@@ -12,14 +12,14 @@
     Require the system parameters configuration file.
 */
 var imported = document.createElement('script');
-imported.src = 'scripts/systemParams.js';
+imported.src = '../scripts/infrastructure/systemParams.js';
 document.head.appendChild(imported);
 
 /**
     Require jQuery, and make it available for Electron.
 */
 var imported = document.createElement('script');
-imported.src = 'scripts/jquery.js';
+imported.src = '../scripts/infrastructure/jquery.js';
 document.head.appendChild(imported);
 
 window.$ = window.jQuery = module.exports;
@@ -34,17 +34,17 @@ window.onload = function() {
 
         // Use jQuery to load the script, and report back to the console if
         // debug mode is set to true.
-        $.getScript(path)
+        $.getScript("../scripts/" + path)
             .done(function() {
                 if (systemParams.debugMode) {
-                    console.group("File '" + path + "' has loaded.");
+                    console.group("Script '" + path + "' has loaded.");
                     console.log(description);
                     console.groupEnd();
                 }
             })
-            .fail(function() {
+            .fail(function(a, b, ex) {
                 if (systemParams.debugMode) {
-                    console.error("File '" + path + "' has failed to load. ");
+                    console.error("Script '" + path + "' has failed to load. (" + ex + ")");
                 }
             });
     };

@@ -3,30 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <title>Starwhale Editor</title>
-        <link rel="stylesheet" type="text/css" href="styles/base.css" />
-        <link rel="stylesheet" type="text/css" href="styles/themes/dark.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/base.css" />
 
-        <script src="scripts/infrastructure/all.js"></script>
+        <script src="../scripts/infrastructure/all.js"></script>
     </head>
 
     <body>
         <div>
         	<div id="left-pane">
-                <div id="file-explorer-section">
-                    <ul>
-                        <li class="folder">node_modules</li>
-                        <li class="folder">styles</li>
-                        <li class="file">index.html</li>
-                        <li class="file">main.js</li>
-                        <li class="file">package.json</li>
-                    </ul>
-                </div>
+                <div data-viewpart="explorer"></div>
         	</div>
 
         	<div id="right-pane">
-                <div id="code-editor-section">
-                    <div id="code-editor" contenteditable="true"></div>
-                </div>
+                <div data-viewpart="code-editor"></div>
         	</div>
         </div>
     </body>
