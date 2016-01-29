@@ -1,5 +1,4 @@
 'use strict'
-
 /**
     @file           windowManager.js
     @author         Eliran Pe'er (eliran@starwhale.com)

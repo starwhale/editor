@@ -1,5 +1,4 @@
-'use strict';
-
+'use strict'
 /**
     @file           main.js
     @author         Eliran Pe'er (eliran@starwhale.com)

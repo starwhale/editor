@@ -11,7 +11,12 @@
 */
 
 /**
-    Global system parameters
+    @property       systemParams
+    @author         Eliran Pe'er (eliran@starwhale.com)
+    @since          28/01/2016
+    @version        1.0.0
+    @type           object
+    @description    Global system parameters
 */
 let systemParams = {
     // Settings debugMode to true if you want to see logs in the console.
@@ -21,19 +26,29 @@ let systemParams = {
 };
 
 /**
-    UI parameters
+    @property       systemParams.ui
+    @author         Eliran Pe'er (eliran@starwhale.com)
+    @since          28/01/2016
+    @version        1.0.0
+    @type           object
+    @description    UI parameters
 */
 systemParams.ui = {
     'leftPanelWidth': 175, // Static width of the left panel (Pixels)
 }
 
 /**
-    Defines a list of scripts to be included on the application startup.
-    To add a script, add a line to the scripts array and use the following format:
+    @property       systemParams.scripts
+    @author         Eliran Pe'er (eliran@starwhale.com)
+    @since          28/01/2016
+    @version        1.0.0
+    @type           object
+    @description    Defines a list of scripts to be included on the application startup.
+                    To add a script, add a line to the scripts array and use the following format:
 
-    'path/to/script.js': "script description"
+                    'path/to/script.js': "script description"
 
-    Note that the base folder for scripts is /scripts/.
+                    Note that the base folder for scripts is /scripts/.
 */
 systemParams.scripts = {
         // Project dependencies

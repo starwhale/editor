@@ -1,5 +1,4 @@
 'use strict'
-
 /**
     @file           clientInterface.js
     @author         Eliran Pe'er (eliran@starwhale.com)
