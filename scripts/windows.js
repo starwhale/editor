@@ -11,8 +11,25 @@
 */
 
 window.windows = {
+    /**
+        @property       windows.list
+        @author         Eliran Pe'er (eliran@starwhale.com)
+        @since          28/01/2016
+        @version        1.0.0
+        @type           object
+        @description    Stores all the currently opened windows. This list might
+                        not be as updated as I wish it was.
+    */
     'list': {},
 
+    /**
+        @property       windows.lastId
+        @author         Eliran Pe'er (eliran@starwhale.com)
+        @since          28/01/2016
+        @version        1.0.0
+        @type           object
+        @description    Stores the last window's id number.
+    */
     'lastId': 0,
 
     /**
