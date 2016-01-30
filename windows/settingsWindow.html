@@ -13,7 +13,10 @@
         <meta charset="UTF-8" />
         <title>Starwhale Editor - Settings</title>
         <link rel="stylesheet" type="text/css" href="../styles/base.css" />
-
+        <link rel="stylesheet" type="text/css" href="../styles/settings.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/external/fontello.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/external/fontello-codes.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/external/fontello-embedded.css" />
         <script src="../scripts/infrastructure/base.js"></script>
 
         <script>
@@ -24,6 +27,84 @@
     </head>
 
     <body>
-        Hello!!!
+      <nav>
+        <ul id="left-navbar">
+          <li><a class="active" href="#core-settings"><i class="icon-cog-5"></i>Core Settings</a></li>
+          <li><a href="#themes"><i class="icon-bucket"></i>Themes</a></li>
+          <li><a href="#keys"><i class="icon-key-4"></i>Keys</a></li>
+        </ul>
+      </nav>
+
+      <div id="main-settings-section">
+
+        <div id="x-settings">
+          <h1 style="color: #f4f4f5;">X settings</h1>
+          <ul id="settings-list">
+            <li>
+              <input type="checkbox" id="check-hide-menu" class="cbx hidden"/>
+              <label for="check-hide-menu" class="lbl"></label>
+              <span class="title-settings">Audio Beep</span>
+              <p>
+                Trigger the system's beep sound when certain actions cannot be executed.
+              </p>
+            </li>
+            <li>
+              <input type="checkbox" id="check-hide-menu" class="cbx hidden"/>
+              <label for="check-hide-menu" class="lbl"></label>
+              <span class="title-settings">Hide Menu</span>
+              <p>
+                Hide the menu bar at top.qwdasdasdasdasdasdasdasdasdasdasdsadasdasdasads
+              </p>
+            </li>
+            <li>
+              <input type="checkbox" id="check-hide-menu" class="cbx hidden"/>
+              <label for="check-hide-menu" class="lbl"></label>
+              <span class="title-settings">Close Empty Windows</span>
+              <p>
+                When a window with no open tabs or panes is given the 'Close Tab' command, close that window.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <div id="y-settings">
+          <h1 style="color: #f4f4f5;">Y settings</h1>
+          <ul id="settings-list">
+            <li>
+              <input type="checkbox" id="check-hide-menu" class="cbx hidden"/>
+              <label for="check-hide-menu" class="lbl"></label>
+              <span class="title-settings">Hide Menu</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Cras elit diam, ultrices et tempus eget, placerat sit amet arcu.
+                Pellentesque lobortis mauris a nibh molestie iaculis nec ut ligula.
+              </p>
+            </li>
+            <li>
+              <input type="checkbox" id="check-hide-menu" class="cbx hidden"/>
+              <label for="check-hide-menu" class="lbl"></label>
+              <span class="title-settings">Hide Menu</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Cras elit diam, ultrices et tempus eget, placerat sit amet arcu.
+                Pellentesque lobortis mauris a nibh molestie iaculis nec ut ligula.
+              </p>
+            </li>
+            <li>
+              <input type="checkbox" id="check-hide-menu" class="cbx hidden"/>
+              <label for="check-hide-menu" class="lbl"></label>
+              <span class="title-settings">Hide Menu</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Cras elit diam, ultrices et tempus eget, placerat sit amet arcu.
+                Pellentesque lobortis mauris a nibh molestie iaculis nec ut ligula.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </body>
 </html>
