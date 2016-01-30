@@ -47,14 +47,23 @@ window.onload = function() {
                         settings.save();
                     }
                 }
-            })
+            });
+
+            let scriptsToLoad = systemParams.scripts;
+
+            /**
+                Load the window script
+            */
+            if ($('html').data('script')) {
+                scriptsToLoad[$('html').data('script') + '.js'] = 'Window script';
+            }
 
             /**
                 Load all the scripts defined in the scripts list.
             */
-            for (let path in systemParams.scripts) {
+            for (let path in scriptsToLoad) {
                 // Extract the description from the scripts array.
-                let description = systemParams.scripts[path];
+                let description = scriptsToLoad[path];
 
                 // Use jQuery to load the script, and report back to the console if
                 // debug mode is set to true.
