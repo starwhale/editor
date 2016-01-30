@@ -35,14 +35,18 @@ window.viewparts = {
                     console.log("Successfuly load view-part: '" + name + "'.");
                 }
 
-                callback(true);
+                if (callback) {
+                    callback(true);
+                }
             })
             .fail(function(a, b, e) {
                 if (systemParams.debugMode) {
                     console.error("Failed to load view-part: '" + name + "'.");
                 }
 
-                callback(false);
+                if (callback) {
+                    callback(false);
+                }
             });
         },
 
@@ -71,14 +75,18 @@ window.viewparts = {
                     console.log("Successfuly load view-part: '" + name + "'.");
                 }
 
-                callback(true);
+                if (callback) {
+                    callback(true);
+                }
             })
             .fail(function() {
                 if (systemParams.debugMode) {
                     console.error("Failed to load view-part: '" + name + "'.");
                 }
 
-                callback(false);
+                if (callback) {
+                    callback(false);
+                }
             });
         }
 };
