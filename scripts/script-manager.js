@@ -9,7 +9,7 @@
     @class scriptmanager
 */
 
-window.scriptmanager {
+window.scriptmanager = {
     /**
         @function       themes.set
         @author         Eliran Pe'er (eliran@starwhale.com)

@@ -31,6 +31,13 @@ window.viewparts = {
             $.get("../view-parts/" + name + ".html", function(data) {
                 $(selector).replaceWith(data);
 
+                /**
+                    Load the scripts defined in the window.
+                */
+                $('<div/>').html(data).find('[data-script]').each(function(i, elem) {
+                    window.scriptmanager.load($(elem).data('script'));
+                });
+
                 if (systemParams.debugMode) {
                     console.log("Successfuly load view-part: '" + name + "'.");
                 }

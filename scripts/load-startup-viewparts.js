@@ -12,3 +12,5 @@
 $('body').find('[data-viewpart]').each(function(i, elem) {
     viewparts.replace($(elem).data('viewpart'), elem);
 });
+
+$(document).trigger("viewpartsLoaded");
