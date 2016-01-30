@@ -57,11 +57,8 @@ systemParams.scripts = {
         'set-panel-sizes.js': "Fix the panel width and height everytime the window resizes.",
         'themes.js': "Defines the themes class, which manages and loads ui themes.",
         'windows.js': "Manage software windows.",
-<<<<<<< HEAD
         'settings-window.js': "Settings screen",
-=======
         'code-editor.js': "Defines the codeeditor class, which contains helper methods that helps managing the code editor.",
->>>>>>> b8cd35c1ef70ad76641878bf3f12f7052d627158
 
         // Startup loaders
         'load-startup-viewparts.js': "Loads the viewparts of the window on startup.",
