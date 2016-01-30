@@ -52,11 +52,12 @@ window.onload = function() {
             let scriptsToLoad = systemParams.scripts;
 
             /**
-                Load the window script
+                Load the scripts defined in the window.
             */
-            if ($('html').data('script')) {
-                scriptsToLoad[$('html').data('script') + '.js'] = 'Window script';
-            }
+            $(document).find('[data-script]').each(function(i, elem) {
+                var script = $(elem).data('script') + '.js';
+                scriptsToLoad[script] = 'Window script on <' + $(elem).prop("tagName").toLowerCase() + '>';
+            });
 
             /**
                 Load all the scripts defined in the scripts list.
