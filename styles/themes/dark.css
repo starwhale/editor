@@ -17,6 +17,13 @@ body {
     background-color: #21252B;
 }
 
-#code-editor {
+#code-editor-section {
     background-color: #282C34;
+    border: 1px solid #222;
+}
+#code-presentor {
+    background-color: pink;
+}
+#code-editor-section .line-numbers {
+    color: #49515f;
 }
