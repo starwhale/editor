@@ -27,6 +27,8 @@ body {
 #file-explorer-section {
     height: 100%;
     overflow: hidden;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
 }
 
 #file-explorer-section ul {

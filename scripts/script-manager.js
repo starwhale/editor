@@ -18,12 +18,14 @@ window.scriptmanager = {
         @type           sync
         @description    Loads a script from the scripts folder.
     */
-    'load': function(name) {
+    'load': function(name, description) {
         $.getScript("../scripts/" + name + '.js')
             .done(function() {
                 if (systemParams.debugMode) {
                     console.group("Script '" + name + "' has loaded.");
-                    console.log(description);
+                    if (description) {
+                        console.log(description);
+                    }
                     console.groupEnd();
                 }
             })

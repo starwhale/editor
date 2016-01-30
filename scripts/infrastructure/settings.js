@@ -257,5 +257,24 @@ window.settings = {
     */
     'observe': function(key, callback) {
         window.settings.observers[key] = callback;
+    },
+
+    /**
+        @function       settings.openWindow
+        @author         Eliran Pe'er (eliran@starwhale.com)
+        @since          28/01/2016
+        @version        1.0.0
+        @type           sync
+        @description    Opens the settings window.
+    */
+    'openWindow': function() {
+        windows.open("settingsWindow", {
+            width: 600,
+            height: 500,
+            minimizable: true,
+            maximizable: false,
+            alwaysOnTop: false,
+            center: true,
+        });
     }
 };
