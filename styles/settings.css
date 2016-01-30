@@ -78,6 +78,7 @@ select, option {
   border-color: rgba(157, 165, 180, 0.61);
   border-radius: 5px 5px 5px 5px;
   height: 1.9em;
+  margin-bottom: 15px;
 }
 
 li input[type="text"] {
@@ -90,6 +91,7 @@ li input[type="text"] {
   height: 1.5em;
   outline: none;
   padding-left: 5px;
+  margin-bottom: 15px;
 }
 
 .lbl {
@@ -137,7 +139,7 @@ li input[type="text"] {
 
 .hidden { display: none; }
 
-.title-checkbox {
+.title-near-checkbox {
   padding-left: 10px;
 }
 
