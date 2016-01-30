@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   loadActiveSettings();
 
   function loadActiveSettings() {
