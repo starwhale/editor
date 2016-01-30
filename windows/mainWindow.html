@@ -13,12 +13,16 @@
         <meta charset="UTF-8" />
         <title>Starwhale Editor</title>
         <link rel="stylesheet" type="text/css" href="../styles/base.css" />
+        <link rel="stylesheet" href="../styles/externals/prism/prism.css" />
 
         <script src="../scripts/infrastructure/base.js"></script>
+        <script src="../scripts/externals/prism/prism.js"></script>
+        <script src="../scripts/externals/ace/src-noconflict/ace.js"></script>
     </head>
 
     <body>
-    	<div id="left-pane">
+    	<div id="left-pane" class="expandable">
+            <!--
             <button onclick='windows.open("settingsWindow", {
                 width: 600,
                 height: 500,
@@ -27,10 +31,12 @@
                 alwaysOnTop: true,
                 center: true,
             });'>Settings</button>
+        -->
             <div data-viewpart="explorer"></div>
     	</div>
 
     	<div id="right-pane">
+            <div data-viewpart="tab-view"></div>
             <div data-viewpart="code-editor"></div>
     	</div>
     </body>

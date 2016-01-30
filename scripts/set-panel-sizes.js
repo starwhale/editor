@@ -13,8 +13,17 @@ $(window).resize(function() {
     let rightPanel = $('#right-pane');
 
     if ($(leftPanel).length && $(rightPanel).length) {
+        let rightPanelBoundsX = $(rightPanel).outerWidth(true) - $(rightPanel).innerWidth();
+        let rightPanelBoundsY = $(rightPanel).outerHeight(true) - $(rightPanel).innerHeight();
+
+        let leftPanelBoundsY = $(leftPanel).outerHeight(true) - $(leftPanel).innerHeight();
+
         $(leftPanel).width(systemParams.ui.leftPanelWidth);
-        $(rightPanel).width($(window).width() - systemParams.ui.leftPanelWidth);
+        $(rightPanel).width($(window).width() - systemParams.ui.leftPanelWidth - rightPanelBoundsX);
+
+        $(leftPanel).height($(window).height() - leftPanelBoundsY);
+        $(rightPanel).height($(window).height() - rightPanelBoundsY);
+
 
         if (systemParams.debugMode) {
             console.group("Panel sizes has changed");

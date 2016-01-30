@@ -6,7 +6,29 @@
     @type           HTML View File
     @description    Repesents the Starwhale code editor control.
 -->
+<style type="text/css" media="screen">
+  #editor {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  }
+</style>
+<script>
+    $(document).ready(function() {
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/twilight");
+        editor.session.setMode("ace/mode/javascript");
+    });
+</script>
 
 <div id="code-editor-section">
-    <div id="code-editor" contenteditable="true"></div>
+    <pre id="editor">function foo(items) {
+        var i;
+        for (i = 0; i &lt; items.length; i++) {
+            alert("Ace Rocks " + items[i]);
+        }
+    }</pre>
 </div>

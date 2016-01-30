@@ -15,12 +15,13 @@ body {
 }
 
 #left-pane {
-    height: 100vh;
 	float: left;
+    margin: 10px 0;
 }
 #right-pane {
-    height: 100vh;
     float: left;
+    margin: 10px 0;
+    margin-right: 10px;
 }
 
 #file-explorer-section {
@@ -33,9 +34,35 @@ body {
 }
 
 #code-editor-section {
+    height: 93%;
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    padding: 10px;
+    padding-left: 20px;
+    margin-bottom: 10px;
 }
 
 #code-editor-section #code-editor {
-    margin: 10px;
-    padding: 10px;
+    width: 100%;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    padding-left: 30px;
+}
+
+#code-editor-section .line-numbers {
+    position: absolute;
+    width: 20px;
+}
+
+#code-presentor {
+    pointer-events: none;
+    position:absolute;
+    z-index: 999;
+}
+
+#tab-view {
+    height: 7%;
+    width: 100%;
 }
