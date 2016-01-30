@@ -9,7 +9,8 @@ var menu = new Menu();
 menu.append(new MenuItem({ label: 'File', submenu: [
     {
         label: 'New Projcet',
-        accelerator: 'Ctrl+O'
+        accelerator: 'Ctrl+O',
+        click: filesystem.openFile
     },
     {
         label: 'Open Project',
@@ -35,7 +36,10 @@ menu.append(new MenuItem({ label: 'File', submenu: [
     },
     {
         label: 'Save As...',
-        accelerator: 'Ctrl+Shift+S'
+        accelerator: 'Ctrl+Shift+S',
+        click: function() {
+            filesystem.saveFileAs(undefined);
+        }
     },
     {
         label: 'Save All'

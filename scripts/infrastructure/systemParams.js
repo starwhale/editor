@@ -59,6 +59,7 @@ systemParams.scripts = {
         'windows.js': "Manage software windows.",
         'script-manager.js': "Loads javascript scsripts",
         'code-editor.js': "Defines the codeeditor class, which contains helper methods that helps managing the code editor.",
+        'filesystem.js': "Contains filesystem communication methods",
 
         // Startup loaders
         'load-startup-viewparts.js': "Loads the viewparts of the window on startup.",

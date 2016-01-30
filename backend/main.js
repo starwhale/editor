@@ -16,6 +16,8 @@ const BrowserWindow = electron.BrowserWindow;
 // IPC module
 const ipcMain = electron.ipcMain;
 
+const dialog = require('electron').dialog;
+
 const clientInterface = require('./clientInterface');
 
 const windowManager = require('./windowManager');
@@ -24,6 +26,7 @@ const windowManager = require('./windowManager');
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
     windowManager.mainWindow = windowManager.createWindow('mainWindow', 0);
+    // console.log(dialog.showOpenDialog({ properties: [ 'openFile', 'openDirectory', 'multiSelections' ]}));
 });
 
 // Create IPC events
