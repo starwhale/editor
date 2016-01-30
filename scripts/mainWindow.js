@@ -14,7 +14,12 @@ menu.append(new MenuItem({ label: 'File', submenu: [
     },
     {
         label: 'Open Project',
-        accelerator: 'Ctrl+Shift+O'
+        accelerator: 'Ctrl+Shift+O',
+        click: function() {
+            filesystem.openFolder(function(fileLits) {
+                explorerManager.setFileList(fileLits);
+            });
+        }
     },
     {
         type: 'separator'
