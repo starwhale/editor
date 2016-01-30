@@ -10,5 +10,5 @@
 */
 
 $('body').find('[data-viewpart]').each(function(i, elem) {
-    viewparts.load($(elem).data('viewpart'), elem);
+    viewparts.replace($(elem).data('viewpart'), elem);
 });
