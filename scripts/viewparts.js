@@ -23,20 +23,26 @@ window.viewparts = {
                             in the file system. (/view-parts/{name}.html)
             @param          (object) selector
                             Whatever you want to replace with the viewpart.
+            @param          (function) callback
+                            A callback that calls when the viewpart is finished loading.
             @return         (void)
         */
-        'replace': function(name, selector) {
+        'replace': function(name, selector, callback) {
             $.get("../view-parts/" + name + ".html", function(data) {
                 $(selector).replaceWith(data);
 
                 if (systemParams.debugMode) {
                     console.log("Successfuly load view-part: '" + name + "'.");
                 }
+
+                callback(true);
             })
-            .fail(function() {
+            .fail(function(a, b, e) {
                 if (systemParams.debugMode) {
                     console.error("Failed to load view-part: '" + name + "'.");
                 }
+
+                callback(false);
             });
         },
 
@@ -53,20 +59,26 @@ window.viewparts = {
                             in the file system. (/view-parts/{name}.html)
             @param          (object) selector
                             Wherever you want the view-part to appear.
+            @param          (function) callback
+                            A callback that calls when the viewpart is finished loading.
             @return         (void)
         */
-        'load': function(name, selector) {
+        'load': function(name, selector, callback) {
             $.get("../view-parts/" + name + ".html", function(data) {
                 $(selector).html(data);
 
                 if (systemParams.debugMode) {
                     console.log("Successfuly load view-part: '" + name + "'.");
                 }
+
+                callback(true);
             })
             .fail(function() {
                 if (systemParams.debugMode) {
                     console.error("Failed to load view-part: '" + name + "'.");
                 }
+
+                callback(false);
             });
         }
 };
